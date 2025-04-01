@@ -1,0 +1,8 @@
+﻿  CH05_cal_clientSW.c
+C:\Users\jaeso\NProj\CH05_cal_clientSW\CH05_cal_clientSW\CH05_cal_clientSW.c(59,10): warning C4477: 'scanf' : 서식 문자열 '%c'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\jaeso\NProj\CH05_cal_clientSW\CH05_cal_clientSW\CH05_cal_clientSW.c(64,9): warning C4477: 'scanf' : 서식 문자열 '%c'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\jaeso\NProj\CH05_cal_clientSW\CH05_cal_clientSW\CH05_cal_clientSW.c(16,33): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\jaeso\NProj\CH05_cal_clientSW\CH05_cal_clientSW\CH05_cal_clientSW.c(54,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jaeso\NProj\CH05_cal_clientSW\CH05_cal_clientSW\CH05_cal_clientSW.c(59,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jaeso\NProj\CH05_cal_clientSW\CH05_cal_clientSW\CH05_cal_clientSW.c(64,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  CH05_cal_clientSW.vcxproj -> C:\Users\jaeso\NProj\CH05_cal_clientSW\Debug\CH05_cal_clientSW.exe

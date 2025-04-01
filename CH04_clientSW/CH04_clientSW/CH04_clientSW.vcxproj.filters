@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CH04_clientSW.cpp">
+    <ClCompile Include="CH04_clientSW.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

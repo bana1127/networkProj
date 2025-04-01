@@ -24,30 +24,34 @@ int main() {
 	bind(hSocket, (SOCKADDR*)&svrAddr, sizeof(svrAddr));
 
 	//3. listen : TCP를 listen 상태로 변경, 연결요청 수신/처리 가능
-	int backlog = 3;
+	int backlog = 3; //대기큐 개수
 	listen(hSocket,backlog);
-	printf("Server> 연결 대기 중 \n");
+	
 
 	//4. accept: TCP 연결 요청 수락. 이어지는 데이터 송수신 준비. 주소는 client주소
 	SOCKADDR_IN clientAddr;
 	SOCKET clientSock;
 	int size = sizeof(clientAddr); //accept는 변수에 clientAddr의 크기를 담고 변수의 주소(포인터)를 적어야함
-	clientSock = accept(hSocket, (SOCKADDR *)&clientAddr, &size);
-	printf("Server> client(IP : %s, port : %d) is connected.\n", inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port)); //net order=Big endian -> host order 변환 필요
 	
-	//5. 상대 client 프로그램과 데이터 송수신
-	char buf[1000];
-	int ret;
-	ret = recv(clientSock, buf, sizeof(buf),0);
-	buf[ret] = 0;
+	for (int i = 0; i < 5; i++) { // 5개 클라이언트 서비스 제공
+		printf("Server> 연결 대기 중 \n");
+		clientSock = accept(hSocket, (SOCKADDR*)&clientAddr, &size);
+		printf("Server> client(IP : %s, port : %d) is connected.\n", inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port)); //net order=Big endian -> host order 변환 필요
 
-	printf("Server> recved data length = %d data = %s\n", ret, buf);
+		//5. 상대 client 프로그램과 데이터 송수신
+		char buf[1000];
+		int ret;
+		ret = recv(clientSock, buf, sizeof(buf), 0);
+		buf[ret] = 0;
 
-	ret = send(clientSock, buf, ret, 0); // 성공을 가정
-	printf("Server> return %d bytes \n", ret);
+		printf("Server> recved data length = %d data = %s\n", ret, buf);
 
-	closesocket(clientSock);
+		ret = send(clientSock, buf, ret, 0); // 성공을 가정
+		printf("Server> return %d bytes \n", ret);
 
+		closesocket(clientSock);
+	}
+	closesocket(hSocket);
 	WSACleanup();
 
 	return 0;
