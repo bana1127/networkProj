@@ -1,0 +1,3 @@
+﻿  CH04_clientSW.cpp
+C:\Users\jaeso\source\repos\CH04_clientSW\CH04_clientSW\CH04_clientSW.cpp(16,33): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  CH04_clientSW.vcxproj -> C:\Users\jaeso\source\repos\CH04_clientSW\Debug\CH04_clientSW.exe

@@ -1,0 +1,5 @@
+﻿  CH03_serverSW.c
+C:\Users\jaeso\NProj\CH03_server\CH03_server\CH03_serverSW.c(22,33): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\jaeso\NProj\CH03_server\CH03_server\CH03_serverSW.c(38,2): warning C4996: 'WSAStringToAddressA': Use WSAStringToAddressW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\jaeso\NProj\CH03_server\CH03_server\CH03_serverSW.c(51,2): warning C4996: 'WSAAddressToStringA': Use WSAAddressToStringW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  CH03_server.vcxproj -> C:\Users\jaeso\NProj\CH03_server\Debug\CH03_server.exe
