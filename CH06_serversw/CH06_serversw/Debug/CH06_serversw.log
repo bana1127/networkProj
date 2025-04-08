@@ -1,0 +1,7 @@
+﻿  CH06_serversw.c
+C:\Users\jaeso\NProj\CH06_serversw\CH06_serversw\CH06_serversw.c(29,33): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\jaeso\NProj\CH06_serversw\CH06_serversw\CH06_serversw.c(40,9): warning C4101: 'clientSock' :참조되지 않은 지역 변수입니다.
+C:\Users\jaeso\NProj\CH06_serversw\CH06_serversw\CH06_serversw.c(65,21): warning C4101: 'rcvTarget' :참조되지 않은 지역 변수입니다.
+C:\Users\jaeso\NProj\CH06_serversw\CH06_serversw\CH06_serversw.c(67,9): warning C4101: 'opndCnt' :참조되지 않은 지역 변수입니다.
+C:\Users\jaeso\NProj\CH06_serversw\CH06_serversw\CH06_serversw.c(65,13): warning C4101: 'rcvSum' :참조되지 않은 지역 변수입니다.
+  CH06_serversw.vcxproj -> C:\Users\jaeso\NProj\CH06_serversw\Debug\CH06_serversw.exe

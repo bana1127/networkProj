@@ -56,19 +56,29 @@ int main() {
 		//- n개 피연산자 입력
 		for (int i = 0; i < opndCnt; i++) {
 			printf("Operand %d : ", i + 1);
-			scanf("%c", buf[i+sizeof(int)+1]);
+			scanf("%d", &buf[i*sizeof(int)+1]);
 		}
+
+		getchar(); //앞 피연산자 입력한 엔터를 삭제 / 숫자 입력하고 엔터를 눌렀을때 scanf(%c)가 엔터를 가져감 따라서 operator를 입력하기 위해서 제거해줘야함
 		//- 연산자 입력
 		// char buf[] 저장 : 미리 정한 메시지(패킷) 구조에 따라서
 		printf("> Operator : ");
-		scanf("%c", buf[opndCnt * sizeof(int) + 1]);
+		scanf("%c", &buf[opndCnt * sizeof(int) + 1]);
 		
 		//2. 서버로 전송 : send
 		send(cSock, buf, opndCnt * sizeof(int) + 2, 0);
 
 		//3. 서버로 부터 결과 수신 : result(int) 저장
-
-
+		 //외우자 
+		int rcvSum = 0;// 수신 누적치
+		int rcvTarget = sizeof(int); //4bytes
+		int ret;
+		while (rcvSum < rcvTarget) {
+			ret = recv(cSock, &buf[rcvSum], rcvTarget - rcvSum, 0);
+			rcvSum += ret;
+		}
+		//서버로부터 result 수신 완료.
+		printf("Client> result from 서버 = %d \n", *((int *)buf)); //buf가 char타입이라서 형변환 해줘야함
 	}
 
 	closesocket(cSock);

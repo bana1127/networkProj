@@ -1,0 +1,4 @@
+﻿  CH05_cal_serverSW.c
+C:\Users\jaeso\NProj\CH05_cal_serverSW\CH05_cal_serverSW\CH05_cal_serverSW.c(29,33): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\jaeso\NProj\CH05_cal_serverSW\CH05_cal_serverSW\CH05_cal_serverSW.c(46,64): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  CH05_cal_serverSW.vcxproj -> C:\Users\jaeso\NProj\CH05_cal_serverSW\Debug\CH05_cal_serverSW.exe
